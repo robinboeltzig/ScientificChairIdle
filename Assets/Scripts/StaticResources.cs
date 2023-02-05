@@ -5,7 +5,7 @@ using UnityEngine;
 public static class StaticResources
 {
 
-    public static List<int> staticCosts = new List<int> {5, 80, 300, 1500, 10000, 50, 800, 4000};
+    public static List<float> staticCosts = new List<float> {5, 80, 300, 1500, 10000, 50, 800, 4000};
 
     public static List<int> staticSigmoid = new List<int> {200, 800, 4000, 20000};
 

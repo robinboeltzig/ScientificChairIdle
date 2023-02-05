@@ -5,15 +5,22 @@ using UnityEngine;
 public class ManualClickerManager : MonoBehaviour
 {
 
+    public AutoResourceHandler autoResourceHandler;
+
     public void DoFarmPaper() {
-        StaticResources.valueReferences += 0.05f;
+        StaticResources.valueReferences += 0.1f+autoResourceHandler.totalWorkForce;
     }
 
     public void DoLookForFunding() {
-        StaticResources.valueUSD += 0.05f;
+        StaticResources.valueUSD += 0.1f+autoResourceHandler.totalWorkForce;
     }
 
     public void DoManageSocialMedia() {
-        StaticResources.valueReputation += 0.05f;
+        StaticResources.valueReputation += 0.1f +autoResourceHandler.totalWorkForce;
     }
+
+    void Update() {
+
+    }
+
 }

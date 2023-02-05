@@ -57,30 +57,26 @@ public class TierManager : MonoBehaviour
             reqPaper = 1;
             break;
             case 5:
-            reqReputation = 60000;
-            reqPaper = 20;
+            reqReputation = 40000;
+            reqPaper = 8;
             break;
             case 6:
-            reqReputation = 200000;
-            reqPaper = 150;
+            reqReputation = 100000;
+            reqPaper = 60;
             break;
             case 7:
-            reqReputation = 750000;
-            reqPaper = 600;
+            reqReputation = 300000;
+            reqPaper = 200;
             break;
             case 8:
-            reqReputation = 1500000;
-            reqPaper = 1400;
+            reqReputation = 800000;
+            reqPaper = 700;
             break;
             case 9:
-            reqReputation = 4000000;
-            reqPaper = 5000;
+            reqReputation = 2000000;
+            reqPaper = 1500;
             break;
             case 10:
-            reqReputation = -1;
-            reqPaper = -1;
-            break;
-            case 21:
             reqReputation = -1;
             reqPaper = -1;
             break;

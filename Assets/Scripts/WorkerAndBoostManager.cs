@@ -6,9 +6,11 @@ using TMPro;
 public class WorkerAndBoostManager : MonoBehaviour
 {
     public List<TMP_Text> textList = new List<TMP_Text>();
-
     public List<TMP_Text> costList = new List<TMP_Text>();
+    public List<float> costCreepList = new List<float> {0, 0, 0, 0, 0, 0, 0, 0};
     public List<int> maxList = new List<int>();
+
+    public float creepFactor = 1.2f;
     public List<int> curList = new List<int> {StaticResources.valueIntern, StaticResources.valueStudent, StaticResources.valuePhDCandidate, StaticResources.valueResearcher, StaticResources.valueResearchAI, StaticResources.valueBeverage, StaticResources.valuePC, StaticResources.valueServer};
     void Start()
     {
@@ -72,6 +74,37 @@ public class WorkerAndBoostManager : MonoBehaviour
     public void UpdateCosts() {
         for(int i=0; i<=7; i++) {
             costList[i].text = StaticResources.staticCosts[i]+"$";
+        }
+    }
+
+    public void CalculateCosts() {
+        for(int i=0; i<=7; i++) {
+            switch(i) {
+                case 0:
+                costCreepList[i] = StaticResources.staticCosts[i]*Mathf.Pow(creepFactor, StaticResources.valueIntern);
+                break;
+                case 1:
+                costCreepList[i] = StaticResources.staticCosts[i]*Mathf.Pow(creepFactor, StaticResources.valueStudent);
+                break;
+                case 2:
+                costCreepList[i] = StaticResources.staticCosts[i]*Mathf.Pow(creepFactor, StaticResources.valuePhDCandidate);
+                break;
+                case 3:
+                costCreepList[i] = StaticResources.staticCosts[i]*Mathf.Pow(creepFactor, StaticResources.valueResearcher);
+                break;
+                case 4:
+                costCreepList[i] = StaticResources.staticCosts[i]*Mathf.Pow(creepFactor, StaticResources.valueResearchAI);
+                break;
+                case 5:
+                costCreepList[i] = StaticResources.staticCosts[i]*Mathf.Pow(creepFactor, StaticResources.valueBeverage);
+                break;
+                case 6:
+                costCreepList[i] = StaticResources.staticCosts[i]*Mathf.Pow(creepFactor, StaticResources.valuePC);
+                break;
+                case 7:
+                costCreepList[i] = StaticResources.staticCosts[i]*Mathf.Pow(creepFactor, StaticResources.valueServer);
+                break;
+            }
         }
     }
 
@@ -140,6 +173,8 @@ public class WorkerAndBoostManager : MonoBehaviour
             }
         }
     }
+
+    
 
 
     

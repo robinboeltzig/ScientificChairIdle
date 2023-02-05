@@ -4130,6 +4130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49194e6fb05e80d4e95a1ab6c87d5dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoResourceHandler: {fileID: 1347474000}
 --- !u!1 &577041512
 GameObject:
   m_ObjectHideFlags: 0
@@ -17693,7 +17694,17 @@ MonoBehaviour:
   - {fileID: 401060064}
   - {fileID: 806545893}
   - {fileID: 986057802}
+  costCreepList:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   maxList: 
+  creepFactor: 1.2
   curList: 0000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &1845534888
 GameObject:
