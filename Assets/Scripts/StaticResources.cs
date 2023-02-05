@@ -5,6 +5,8 @@ using UnityEngine;
 public static class StaticResources
 {
 
+    public static List<int> staticCosts = new List<int> {5, 80, 300, 1500, 10000, 50, 800, 4000};
+
     //Resources
     public static float valueUSD;
     public static float valueReferences;
@@ -35,5 +37,12 @@ public static class StaticResources
     public static int valueServer;
 
     //Publishing
+
+    public static int publishingType;
+    public static int allocateResources;
+
+    public static float calculateUSD() {
+        return 0;
+    }
 
 }

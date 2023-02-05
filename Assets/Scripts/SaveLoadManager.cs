@@ -44,6 +44,9 @@ public class SaveLoadManager : MonoBehaviour
         StaticResources.valuePC= PlayerPrefs.GetInt("valuePC", 0);
         StaticResources.valueServer= PlayerPrefs.GetInt("valueServer", 0);
 
+        //Publishing
+        StaticResources.publishingType= PlayerPrefs.GetInt("publishingType", 0);
+        StaticResources.allocateResources= PlayerPrefs.GetInt("allocateResources", 0);
     }
 
     public void SaveAll() {
@@ -74,9 +77,45 @@ public class SaveLoadManager : MonoBehaviour
         PlayerPrefs.SetInt("valuePC", StaticResources.valuePC);
         PlayerPrefs.SetInt("valueServer", StaticResources.valueServer);
 
+        //Publishing
+        PlayerPrefs.SetInt("publishingType", StaticResources.publishingType);
+        PlayerPrefs.SetInt("allocateResources", StaticResources.allocateResources);
 
         PlayerPrefs.Save();
     }
 
+    public void ResetAll() {
+        //Resources
+        StaticResources.valueUSD = 0;
+        StaticResources.valueReferences = 0;
+        StaticResources.valueReputation = 0;
+        StaticResources.valuePublishedPapers = 0;
+
+        //AreaStatus
+
+        StaticResources.areaStatus = 0;
+
+        //AutomationUnits
+        StaticResources.valueIntern = 0;
+        StaticResources.valueStudent = 0;
+        StaticResources.valuePhDCandidate = 0;
+        StaticResources.valueResearcher = 0;
+        StaticResources.valueResearchAI = 0;
+
+        //AutomationAllocation
+        StaticResources.percentUSD = 0;
+        StaticResources.percentReferences = 0;
+        StaticResources.percentReputation = 0;
+
+        //Boosts
+        StaticResources.valueBeverage = 0;
+        StaticResources.valuePC = 0;
+        StaticResources.valueServer = 0;
+
+        //Publishing
+        StaticResources.publishingType = 0;
+        StaticResources.allocateResources = 0;
+
+    } 
 
 }

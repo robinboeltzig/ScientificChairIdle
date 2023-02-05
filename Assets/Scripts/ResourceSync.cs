@@ -15,10 +15,10 @@ public class ResourceSync : MonoBehaviour
     void Update()
     {
 
-        textUSD.text = StaticResources.valueUSD.ToString("F1");
-        textReferences.text = StaticResources.valueReferences.ToString("F1");
-        textReputation.text = StaticResources.valueReputation.ToString("F1");
-        textPublishedPapers.text = StaticResources.valuePublishedPapers.ToString("F1");
+        textUSD.text = StaticResources.valueUSD.ToString("F2");
+        textReferences.text = StaticResources.valueReferences.ToString("F2");
+        textReputation.text = StaticResources.valueReputation.ToString("F2");
+        textPublishedPapers.text = StaticResources.valuePublishedPapers.ToString("F2");
         
     }
 }
