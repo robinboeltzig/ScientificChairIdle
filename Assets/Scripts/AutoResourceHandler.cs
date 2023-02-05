@@ -29,9 +29,9 @@ public class AutoResourceHandler : MonoBehaviour
     }
 
     public void ApplyWorkforce(float deltaTime) {
-        StaticResources.valueUSD += totalWorkForce * StaticResources.percentUSD * deltaTime;
-        StaticResources.valueReferences += totalWorkForce * StaticResources.percentReferences* deltaTime;
-        StaticResources.valueReputation += totalWorkForce * StaticResources.percentReputation * deltaTime;
+        StaticResources.valueUSD += totalWorkForce * StaticResources.percentUSD * deltaTime /100;
+        StaticResources.valueReferences += totalWorkForce * StaticResources.percentReferences* deltaTime /100;
+        StaticResources.valueReputation += totalWorkForce * StaticResources.percentReputation * deltaTime /100;
     }
 
 }

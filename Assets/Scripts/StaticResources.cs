@@ -7,6 +7,10 @@ public static class StaticResources
 
     public static List<int> staticCosts = new List<int> {5, 80, 300, 1500, 10000, 50, 800, 4000};
 
+    public static List<int> staticSigmoid = new List<int> {200, 800, 4000, 20000};
+
+    public static List<float> staticPaper = new List<float>{0.1f, 0.5f, 3f, 20f};
+
     //Resources
     public static float valueUSD;
     public static float valueReferences;

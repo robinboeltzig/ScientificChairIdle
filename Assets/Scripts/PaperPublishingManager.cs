@@ -14,6 +14,10 @@ public class PaperPublishingManager : MonoBehaviour
     public TMP_InputField input;
     public Image image;
 
+    public TMP_Text oddsText;
+
+    public float odds;
+
 
 
     void Start()
@@ -29,7 +33,7 @@ public class PaperPublishingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateOdds();
     }
 
     public void OnDropdown(int value) {
@@ -45,9 +49,24 @@ public class PaperPublishingManager : MonoBehaviour
             StaticResources.allocateResources = Int32.Parse(input);
         }
     }
-
     public float CalculateSigmoid(float input, float middle) {
-        return 1/(1 + Mathf.Exp(-(input-middle)));
+        return 1/(1 + Mathf.Exp(-((input*(5/middle))-5)));
+    }
+
+    public void UpdateOdds() {
+        odds = CalculateSigmoid(StaticResources.allocateResources, StaticResources.staticSigmoid[StaticResources.publishingType]);
+
+        oddsText.text = odds*100+"%";
+
+    }
+
+    public void TrySubmit() {
+        if(StaticResources.valueReferences>=StaticResources.allocateResources) {
+            StaticResources.valueReferences = StaticResources.valueReferences- StaticResources.allocateResources;
+            if(odds>UnityEngine.Random.Range(0f, 1f)) {
+                StaticResources.valuePublishedPapers += StaticResources.staticPaper[StaticResources.publishingType];
+            }
+        }
     }
 
 }

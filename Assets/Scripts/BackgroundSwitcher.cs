@@ -46,4 +46,9 @@ public void ToggleOptions() {
     }
 }
 
+public void QuitGame() {
+    Application.Quit();
+}
+
+
 }

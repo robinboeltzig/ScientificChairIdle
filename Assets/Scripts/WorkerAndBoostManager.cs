@@ -110,31 +110,31 @@ public class WorkerAndBoostManager : MonoBehaviour
 
     public void BuyTenItems(int index) {
         if(StaticResources.valueUSD >= StaticResources.staticCosts[index] * 10 && (curList[index] +10) < maxList[index]) {
-            StaticResources.valueUSD =- StaticResources.staticCosts[index] * 10;
+            StaticResources.valueUSD -= StaticResources.staticCosts[index] * 10;
             switch(index) {
                 case 0:
-                StaticResources.valueIntern =+10;
+                StaticResources.valueIntern +=10;
                 break;
                 case 1:
-                StaticResources.valueStudent =+10;
+                StaticResources.valueStudent +=10;
                 break;
                 case 2:
-                StaticResources.valuePhDCandidate =+10;
+                StaticResources.valuePhDCandidate +=10;
                 break;
                 case 3:
-                StaticResources.valueResearcher =+10;
+                StaticResources.valueResearcher +=10;
                 break;
                 case 4:
-                StaticResources.valueResearchAI =+10;
+                StaticResources.valueResearchAI +=10;
                 break;
                 case 5:
-                StaticResources.valueBeverage =+10;
+                StaticResources.valueBeverage +=10;
                 break;
                 case 6:
-                StaticResources.valuePC =+10;
+                StaticResources.valuePC +=10;
                 break;
                 case 7:
-                StaticResources.valueServer =+10;
+                StaticResources.valueServer +=10;
                 break;
 
             }

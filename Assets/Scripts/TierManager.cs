@@ -29,7 +29,7 @@ public class TierManager : MonoBehaviour
     }
 
     public void TryUpgradeTier() {
-        if(StaticResources.valueReputation >= reqReputation && StaticResources.valuePublishedPapers >= reqPaper) {
+        if(StaticResources.valueReputation >= reqReputation && StaticResources.valuePublishedPapers >= reqPaper && reqPaper != -1) {
             StaticResources.areaStatus++;
         }
     }
@@ -80,6 +80,10 @@ public class TierManager : MonoBehaviour
             reqReputation = -1;
             reqPaper = -1;
             break;
+            case 21:
+            reqReputation = -1;
+            reqPaper = -1;
+            break;
         }
     }
 
@@ -99,8 +103,14 @@ public class TierManager : MonoBehaviour
     public void UpdateText() {
 
         tierText.text = "Tier:\n" + StaticResources.areaStatus +"/10";
+        if(reqPaper == -1) {
+            reputationText.text = "MAX";
+            paperText.text = "MAX";
+        }
+        else {
         reputationText.text = reqReputation.ToString();
         paperText.text = reqPaper.ToString();
+        }
     }
 
 }

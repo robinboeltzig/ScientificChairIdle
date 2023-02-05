@@ -6,6 +6,7 @@ public class SaveLoadManager : MonoBehaviour
 {
     private void Awake() {
         LoadAll();
+        Application.targetFrameRate = 240;
     }
 
     private void Update() {
