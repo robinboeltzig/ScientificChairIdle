@@ -9,10 +9,16 @@ public Image backgroundImage;
 public List<Sprite> imgList = new List<Sprite>();
 public List<GameObject> panelList = new List<GameObject>();
 
+    public Button quitButton;
+
 
     public void Start() {
         
         SwitchToBackground("MainMenu");
+        if(Application.platform == RuntimePlatform.WebGLPlayer)
+        {
+            quitButton.enabled = false;
+        }
     }
 
 public void SwitchToBackground(string ImageName) {

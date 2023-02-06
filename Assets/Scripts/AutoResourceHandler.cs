@@ -6,14 +6,14 @@ public class AutoResourceHandler : MonoBehaviour
 {
     public float totalWorkForce;
 
-    public float internPower = 0.3f;
-    public float studentPower = 2.5f;
-    public float phdPower = 10f;
-    public float researcherPower = 35f;
-    public float aiPower = 500f;
+    public float internPower = 0.5f;
+    public float studentPower = 4f;
+    public float phdPower = 20f;
+    public float researcherPower = 80f;
+    public float aiPower = 1000f;
 
-    public float beverageMulti = 0.03f;
-    public float pcMulti = 0.08f;
+    public float beverageMulti = 0.04f;
+    public float pcMulti = 0.1f;
     public float serverMulti = 0.3f;
     void Update()
     {
